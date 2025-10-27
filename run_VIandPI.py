@@ -1,3 +1,4 @@
+# run_VIandPI.py
 from VIandPI import Value_iteration, Policy_iteration
 from inventory_control import Inventory
 
@@ -19,4 +20,4 @@ print("=" * 50)
 pi_model = Policy_iteration(env)
 policy, value = pi_model.solve(max_iter=10000)
 print("Policy: ", policy)
-print("Value: ", value)
+print("Value: ", value) 
