@@ -19,7 +19,7 @@ if __name__ == '__main__':
     print("="*50)
 
 
-    # Q-learning
+    # Q-learning --- 실행 ---
     print("Q-learning agent")
     model = qlearning(env, gamma=0.99, learning_rate=0.5, eps=0.1)
     model.learn(int(2.0e4)) # reward가 풍부하지 않은 (windygrid처럼 상하좌우밖에 없음) -> 탐색을 많이 돌려야 함(러닝레이트나 엡실론 크게 잡아놓은거임)
@@ -27,7 +27,7 @@ if __name__ == '__main__':
     # # SARSA
     # model = sarsa(env, gamma=0.99, learning_rate=0.5, eps=0.1)
     # model.learn(int(3.0e4))
-    
+
 # ---- 학습 결과 출력 코드 (없으면 학습만 시키고 학습에 대한 결과물 못봄) ---
     obs = env.reset()
     for episodes in range(3): # 최대 episode 종료 횟수로 확인하고 싶을 때.
